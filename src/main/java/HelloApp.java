@@ -7,14 +7,7 @@ public class HelloApp {
         if (args.length == 0) {
             names = "World";
         } else {
-            StringBuilder sb = new StringBuilder();
-
-            for (String name : args) {
-                sb.append(name).append(", ");
-            }
-
-            // Remove last ", "
-            names = sb.substring(0, sb.length() - 2);
+            names = String.join(", ", args);
         }
 
         System.out.println("Hello, " + names + "!");
